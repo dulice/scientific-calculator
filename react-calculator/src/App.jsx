@@ -154,8 +154,8 @@ const App = () => {
         setScreenValue(toDecimal);
       } else {
         const toFraction = fraction(screenValue);
-        const value = `${toFraction.n}${
-          toFraction.d === 1 ? "" : `/${toFraction.d}`
+        const value = `${toFraction.s === 1 ? "" : "-"} ${toFraction.n} ${
+          toFraction.d === 1 ? "" : `/ ${toFraction.d}`
         }`;
         setScreenValue(value);
       }
